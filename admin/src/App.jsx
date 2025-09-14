@@ -11,7 +11,7 @@ import Layout from "./pages/Layout"
 
 
 
-export const backendUrl = import.meta.env.VITE_BACKEND_URL
+export const backendUrl = "https://ecommerce-lscq.onrender.com"
 export const currency='₹'
 
 function App() {
