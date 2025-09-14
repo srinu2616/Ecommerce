@@ -54,10 +54,12 @@ const PlaceOrder = () => {
         items: orderItems,
         amount: getCartAmount() + delivery_fee
       }
+      let response;
+
       switch (method) {
         //API calls for COD
         case 'cod':
-          const response = await axios.post(
+           response = await axios.post(
             backendUrl + '/api/order/place',
             orderData,
             { headers: { token } }   
@@ -300,7 +302,7 @@ const PlaceOrder = () => {
 
               <button
                 type='submit'
-                // onClick={() => navigate('/orders')}
+                //  onClick={() => navigate('/orders')}
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 font-medium text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 PLACE ORDER
